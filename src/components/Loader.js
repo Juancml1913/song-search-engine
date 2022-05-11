@@ -1,0 +1,18 @@
+import React from "react";
+import "./Loader.css";
+
+const Loader = () => {
+  return (
+    <div className="columns">
+      <div className="column is-offset-5">
+        <div className="lds-facebook">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Loader;
