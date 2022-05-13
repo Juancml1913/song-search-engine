@@ -22,7 +22,7 @@ function Search() {
 
   useEffect(() => {
     setLoading(true);
-    let endpoint = `${url}/search?q=Tigres del norte`;
+    let endpoint = `${url}/search?q=guns and roses`;
     helpHttp()
       .get(endpoint)
       .then((res) => {
