@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/song-search-engine/static/css/main.f7e77467.css",
+    "main.js": "/song-search-engine/static/js/main.e590865c.js",
+    "static/js/787.2d039ac2.chunk.js": "/song-search-engine/static/js/787.2d039ac2.chunk.js",
+    "index.html": "/song-search-engine/index.html",
+    "main.f7e77467.css.map": "/song-search-engine/static/css/main.f7e77467.css.map",
+    "main.e590865c.js.map": "/song-search-engine/static/js/main.e590865c.js.map",
+    "787.2d039ac2.chunk.js.map": "/song-search-engine/static/js/787.2d039ac2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7e77467.css",
+    "static/js/main.e590865c.js"
+  ]
+}
