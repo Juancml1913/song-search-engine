@@ -36,9 +36,6 @@ function SearchBar({ getSongsLocal }) {
       style={{ padding: "1em", backgroundColor: "#ffc355" }}
     >
       <div className="level-item">
-        <span className="icon">
-          <i className="fas fa-home"></i>
-        </span>
         <p className="title is-3">Song search engine</p>
       </div>
       <div className="level-item">

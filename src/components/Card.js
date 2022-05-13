@@ -7,6 +7,10 @@ function Card({ song, getArtistLocal }) {
     navigate(`/artist/${song.primary_artist.id}`);
   };
 
+  const handleSong = (e) => {
+    navigate(`/song/${song.id}`);
+  };
+
   return (
     <div className="column is-3-desktop is-4-tablet">
       <div className="card">
@@ -18,8 +22,16 @@ function Card({ song, getArtistLocal }) {
         <div className="card-content">
           <div className="media">
             <div className="media-content">
-              <p className="title is-4">{song.title}</p>
-              <button onClick={handleArtist} className="button is-ghost">
+              <button
+                onClick={handleSong}
+                className="button is-ghost is-medium"
+              >
+                {song.title}
+              </button>
+              <button
+                onClick={handleArtist}
+                className="button is-ghost is-normal"
+              >
                 {song.primary_artist.name}
               </button>
             </div>

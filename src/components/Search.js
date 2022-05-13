@@ -7,8 +7,9 @@ import { helpHttp } from "../helpers/helpHttp";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import Message from "./Message";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 import Error404 from "./Error404";
+import Song from "./Song";
 function Search() {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -67,6 +68,18 @@ function Search() {
     <div>
       <HashRouter>
         <SearchBar getSongsLocal={getSongsLocal} />
+        <nav className="breadcrumb container" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <NavLink to="/">
+                <span className="icon is-small">
+                  <i className="fas fa-home" aria-hidden="true"></i>
+                </span>
+                <span>Home</span>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
         {loading && <Loader />}
         {error && (
           <Message
@@ -84,6 +97,11 @@ function Search() {
             exact
             path="/artist/:id"
             element={<Artist setLoading={setLoading} setError={setError} />}
+          />
+          <Route
+            exact
+            path="/song/:id"
+            element={<Song setLoading={setLoading} setError={setError} />}
           />
           <Route path="*" element={Error404} />
         </Routes>

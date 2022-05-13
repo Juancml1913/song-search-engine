@@ -1,8 +1,9 @@
-import { GET_ARTIST, GET_SONGS, NO_DATA } from "../types";
+import { GET_ARTIST, GET_SONG, GET_SONGS, NO_DATA } from "../types";
 
 const initialState = {
   songs: [],
   artist: {},
+  song: {},
 };
 function searchReducer(state = initialState, action) {
   switch (action.type) {
@@ -11,6 +12,9 @@ function searchReducer(state = initialState, action) {
     }
     case GET_ARTIST: {
       return { ...state, artist: action.payload };
+    }
+    case GET_SONG: {
+      return { ...state, song: action.payload };
     }
     case NO_DATA: {
       return initialState;
